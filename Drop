@@ -1,0 +1,31 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class Drop_Down {
+
+	public static void main(String[] args) {
+		//  Author:Benrajuselenium@gmaail.com
+WebDriver dr=new FirefoxDriver();
+dr.navigate().to("file:///C:/Users/W/Desktop/ben.html");
+ WebElement a= dr.findElement(By.name("mydropdown"));
+ 
+ Select s1=new Select(a);
+List<WebElement>  all=s1.getOptions();
+int num=all.size();
+for(int i=0;i<num;i++)
+{ String  p=all.get(i).getText();
+System.out.println(p);
+	
+}
+
+
+	}
+
+}
+
